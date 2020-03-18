@@ -1,6 +1,4 @@
-package ¼òµ¥ÒßÇé´ò¿¨;
-
-
+package ç®€å•ç–«æƒ…æ‰“å¡;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -24,13 +22,13 @@ import java.awt.event.ActionEvent;
 
 public class days extends JFrame {
 
-	private static final String URL="jdbc:sqlserver://localhost:1433;DatabaseName=¼òµ¥ÒßÇé´ò¿¨²éÑ¯";  
+	private static final String URL="jdbc:sqlserver://localhost:1433;DatabaseName=ç®€å•ç–«æƒ…æ‰“å¡æŸ¥è¯¢";  
     private static final String USERNAME="sa";  
     private static final String PASSWORD="zxcvbnm123";
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTable table;
-	String titles[]={"Ñ§Ôº","ËùÔÚ°à¼¶","Ñ§ºÅ","ĞÕÃû","Ä¿Ç°ËùÔÚÊ¡","Ä¿Ç°ËùÔÚÊĞ","ÊÇ·ñÈ·ÈÏ±»¸ĞÈ¾","ÊÇ·ñÒÉËÆ²¡Àı","ÊÇ·ñÓëÒßÇøÈËÔ±½Ó´¥¹ı","ÊÇ·ñ½ñÈÕ·µĞ£","Ìî±¨ÈÕÆÚ"};
+	String titles[]={"å­¦é™¢","æ‰€åœ¨ç­çº§","å­¦å·","å§“å","ç›®å‰æ‰€åœ¨çœ","ç›®å‰æ‰€åœ¨å¸‚","æ˜¯å¦ç¡®è®¤è¢«æ„ŸæŸ“","æ˜¯å¦ç–‘ä¼¼ç—…ä¾‹","æ˜¯å¦ä¸ç–«åŒºäººå‘˜æ¥è§¦è¿‡","æ˜¯å¦ä»Šæ—¥è¿”æ ¡","å¡«æŠ¥æ—¥æœŸ"};
 	String[][] info=new String[66][13];
 	
 	public days() {
@@ -71,7 +69,7 @@ public class days extends JFrame {
 				try{
 					Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		        	Connection conn=DriverManager.getConnection(URL, USERNAME,PASSWORD); 
-		        	PreparedStatement pstmt = conn.prepareStatement("select * from ÒßÇé·À¿ØÍ³¼Æ±í  Where Ìî±¨ÈÕÆÚ=?");
+		        	PreparedStatement pstmt = conn.prepareStatement("select * from ç–«æƒ…é˜²æ§ç»Ÿè®¡è¡¨  Where å¡«æŠ¥æ—¥æœŸ=?");
 		        	pstmt.setString(1, textField.getText());
 		        	ResultSet rs=pstmt.executeQuery();
 		        	int i=0;
@@ -91,7 +89,7 @@ public class days extends JFrame {
 			    		i++;
 			    	}
 		        	if(i==0){
-		        		JOptionPane.showMessageDialog(contentPane,"ÎŞÏà¹ØĞÅÏ¢£¡","´íÎóÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+		        		JOptionPane.showMessageDialog(contentPane,"æ— ç›¸å…³ä¿¡æ¯ï¼","é”™è¯¯æç¤º",JOptionPane.WARNING_MESSAGE);
 		        	}
 		        	table.setEnabled(false);
 					model.setDataVector(info,titles);
@@ -109,7 +107,7 @@ public class days extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new administrator();
-				dispose();
+				//dispose();åœ¨å½“å‰é¡µé¢ç‚¹å‡»è¿”å›æŒ‰é’®æ—¶ï¼Œè¿”å›å‰ä¸€ä¸ªé¡µé¢åŒæ—¶å…³é—­å½“å‰é¡µé¢
 			}
 		});
 		btnNewButton_1.setBounds(339, 35, 74, 23);
