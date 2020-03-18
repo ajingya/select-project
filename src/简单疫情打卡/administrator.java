@@ -1,5 +1,4 @@
-package ¼òµ¥ÒßÇé´ò¿¨;
-
+package ç®€å•ç–«æƒ…æ‰“å¡;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -12,7 +11,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class administrator extends JFrame {
-
 	private JPanel contentPane;
 	public administrator() {
 		setTitle("\u7ba1\u7406\u8005\u529f\u80fd");
@@ -21,8 +19,7 @@ public class administrator extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
+		contentPane.setLayout(null);		
 		JButton bb1 = new JButton("\u67e5\u8be2\u6240\u6709\u586b\u62a5\u7684\u4fe1\u606f");
 		bb1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -36,12 +33,11 @@ public class administrator extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new main().setVisible(true);
-				dispose();
+			 //dispose();
 			}
 		});
 		button.setBounds(120, 192, 200, 30);
 		contentPane.add(button);
-		
 		JButton bcc1 = new JButton("\u67d0\u65e5\u586b\u62a5\u67e5\u8be2");
 		bcc1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
