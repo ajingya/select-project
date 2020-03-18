@@ -1,5 +1,5 @@
-package ¼òµ¥ÒßÇé´ò¿¨;
-
+package ç®€å•ç–«æƒ…æ‰“å¡;
+//ä»£ç ä¸­å‡ä½¿ç”¨ACSIIç 
 	import java.awt.BorderLayout;
 	import java.awt.EventQueue;
 
@@ -49,12 +49,12 @@ package ¼òµ¥ÒßÇé´ò¿¨;
 					String zh1=zh.getText();
 					String mm1=mm.getText();
 					if(zh1.equals("lee")&&mm1.equals("000000")){
-						//¹ÜÀíÔ±µÇÂ¼½çÃæ¿ÉÊ¹ÓÃÕË»§ÃûºÍÃÜÂë½øĞĞÉí·İÑéÖ¤
+						//ç®¡ç†å‘˜ç™»å½•ç•Œé¢å¯ä½¿ç”¨è´¦æˆ·åå’Œå¯†ç è¿›è¡Œèº«ä»½éªŒè¯
 						new administrator();
 						dispose();
 					}else{
-						JOptionPane.showMessageDialog(contentPane,"ÕËºÅ»òÃÜÂë´íÎó£¬ÇëÖØĞÂÊäÈë£¡","´íÎóÌáÊ¾",JOptionPane.ERROR_MESSAGE);
-					}
+						JOptionPane.showMessageDialog(contentPane,"è´¦å·æˆ–å¯†ç é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼","é”™è¯¯æç¤º",JOptionPane.ERROR_MESSAGE);
+					}//è¾“å…¥é”™è¯¯æ—¶å¼¹å‡ºæé†’æ¡†
 				}
 			});
 			button.setBounds(99, 128, 83, 23);
