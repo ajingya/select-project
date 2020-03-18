@@ -1,6 +1,4 @@
-package ¼òµ¥ÒßÇé´ò¿¨;
-
-
+package ç®€å•ç–«æƒ…æ‰“å¡;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -21,18 +19,16 @@ import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-//import java.sql.SQLException;
-//import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 public class select extends JFrame {
 
-	private static final String URL="jdbc:sqlserver://localhost:1433;DatabaseName=¼òµ¥ÒßÇé´ò¿¨²éÑ¯";  
+	private static final String( URL="jdbc:sqlserver://localhost:1433;DatabaseName=ç®€å•ç–«æƒ…æ‰“å¡æŸ¥è¯¢");  
     private static final String USERNAME="sa";  
     private static final String PASSWORD="zxcvbnm123";
 	private JPanel contentPane;
 	private JTable table;
-	String titles[]={"Ñ§Ôº","ËùÔÚ°à¼¶","Ñ§ºÅ","ĞÕÃû","Ä¿Ç°ËùÔÚÊ¡","Ä¿Ç°ËùÔÚÊĞ","ÊÇ·ñÈ·ÈÏ±»¸ĞÈ¾","ÊÇ·ñÒÉËÆ²¡Àı","ÊÇ·ñÓëÒßÇøÈËÔ±½Ó´¥¹ı","ÊÇ·ñ½ñÈÕ·µĞ£","Ìî±¨ÈÕÆÚ"};
+	String titles[]={"å­¦é™¢","æ‰€åœ¨ç­çº§","å­¦å·","å§“å","ç›®å‰æ‰€åœ¨çœ","ç›®å‰æ‰€åœ¨å¸‚","æ˜¯å¦ç¡®è®¤è¢«æ„ŸæŸ“","æ˜¯å¦ç–‘ä¼¼ç—…ä¾‹","æ˜¯å¦ä¸ç–«åŒºäººå‘˜æ¥è§¦è¿‡","æ˜¯å¦ä»Šæ—¥è¿”æ ¡","å¡«æŠ¥æ—¥æœŸ"};
 	String[][] info=new String[66][13];
 	private JLabel label;
 	private JTextField textField;
@@ -65,13 +61,13 @@ public class select extends JFrame {
 		textField.setColumns(10);
 		
 		button = new JButton("\u67E5\u627E");
-		button.setToolTipText("¸ù¾İÄ³Ò»ĞÅÏ¢²éÑ¯");
+		button.setToolTipText("æ ¹æ®æŸä¸€ä¿¡æ¯æŸ¥è¯¢");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
 		        	Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		        	Connection conn=DriverManager.getConnection(URL, USERNAME,PASSWORD); 
-		        	PreparedStatement pstmt = conn.prepareStatement("select * from ÒßÇé·À¿ØÍ³¼Æ±í  Where Ñ§Ôº=? or ËùÔÚ°à¼¶=? or ĞÕÃû=? or Ñ§ºÅ=? or Ä¿Ç°ËùÔÚÊ¡=? or Ä¿Ç°ËùÔÚÊĞ=?");
+		        	PreparedStatement pstmt = conn.prepareStatement("select * from ç–«æƒ…é˜²æ§ç»Ÿè®¡è¡¨  Where å­¦é™¢=? or æ‰€åœ¨ç­çº§=? or å§“å=? or å­¦å·=? or ç›®å‰æ‰€åœ¨çœ=? or ç›®å‰æ‰€åœ¨å¸‚=?");
 		        	pstmt.setString(1, textField.getText());
 		        	pstmt.setString(2, textField.getText());
 		        	pstmt.setString(3, textField.getText());
@@ -96,7 +92,7 @@ public class select extends JFrame {
 			    		i++;
 			    	}
 				if(i==0){
-		        		JOptionPane.showMessageDialog(contentPane,"ÎŞÏà¹ØĞÅÏ¢£¡","´íÎóÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+		        		JOptionPane.showMessageDialog(contentPane,"æ— ç›¸å…³ä¿¡æ¯ï¼","é”™è¯¯æç¤º",JOptionPane.WARNING_MESSAGE);
 		        	}
 				
 			    	table.setEnabled(false);
@@ -116,7 +112,7 @@ public class select extends JFrame {
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new administrator().setVisible(true);
-				dispose();
+				//dispose();
 			}
 		});
 		button_1.setBounds(285, 15, 70, 23);
