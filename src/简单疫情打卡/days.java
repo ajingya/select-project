@@ -110,7 +110,7 @@ public class days extends JFrame {
 				//dispose();在当前页面点击返回按钮时，返回前一个页面同时关闭当前页面
 			}
 		});
-		btnNewButton_1.setBounds(339, 35, 74, 23);
+		btnNewButton_1.setBounds(340, 35, 74, 23);
 		contentPane.add(btnNewButton_1);
 				
 	}
